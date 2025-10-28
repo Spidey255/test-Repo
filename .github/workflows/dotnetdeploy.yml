@@ -57,6 +57,7 @@ jobs:
           key: ${{ secrets.SERVER_SSH_KEY }}
           source: "server/publish/*"
           target: /home/cpsadmin/Presentations/TestAPICICD
+          strip_components: 1
 
       - name: Restart API service on server
         run: |
