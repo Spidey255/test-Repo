@@ -1,0 +1,50 @@
+
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+  </PropertyGroup>
+ 
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>bin</OutputPath>
+      <Version>5.2.07.08</Version>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Text.Json" Version="9.0.0" />
+    <PackageReference Include="EnterpriseLibrary.Data.NetCore" Version="6.3.2" />
+  </ItemGroup>
+ 
+   <ItemGroup>
+    <ProjectReference Include="..\FormInterfaceLibrary\FormInterfaceLibrary.csproj" />
+    <ProjectReference Include="..\FormModels\FormModels.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>    
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\SupportDLL\Newtonsoft.Json.dll</HintPath>
+    </Reference>     
+    <Reference Include="log4net">
+      <HintPath>..\SupportDLL\log4net.dll</HintPath>
+    </Reference> 
+     <Reference Include="ObjectFactory">
+      <HintPath>..\SupportDLL\ObjectFactory.dll</HintPath>
+    </Reference>
+    <Reference Include="ProofExceptions">
+      <HintPath>..\SupportDLL\ProofExceptions.dll</HintPath>
+    </Reference>
+     <Reference Include="CommonInterface">
+      <HintPath>..\SupportDLL\CommonInterface.dll</HintPath>
+    </Reference>
+  
+ 
+      <Reference Include="ConfigSectionHandlers">
+      <HintPath>..\SupportDLL\ConfigSectionHandlers.dll</HintPath>
+    </Reference>
+    
+    </ItemGroup>
+    <ItemGroup>
+   
+  </ItemGroup>
+   
+</Project>

@@ -1,0 +1,18 @@
+
+
+  
+{
+  "ConnectionStrings": {
+
+    "0314393C-29B4-4E60-8D11-595EDAAAC42F": {
+      "connectionString": "Data Source=210.18.135.72;Initial Catalog=UserRoleRepository;User ID=sa; Password=RsVmR975@;Connection Timeout = 30;",
+      "providerName": "System.Data.SqlClient"
+    },
+
+    "44F29D07-21DA-4931-970D-3545F5BCBEB8": {
+      "connectionString": "Data Source=210.18.135.72;Initial Catalog=AuditLog;User ID=sa; Password=RsVmR975@;Max Pool Size=200;Type System Version= Latest;Connection Timeout = 30;Application Name = Proof Portal",
+      "providerName": "System.Data.SqlClient"
+    }
+  
+  }
+}

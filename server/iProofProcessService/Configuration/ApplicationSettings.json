@@ -1,0 +1,22 @@
+
+{
+  "ApplicationSettings": {
+    //DbType 0 - SQL, 1 - Mysql, 2 - Oracle
+    "RepdbType": "0",
+    "RepConnectionName": "0314393C-29B4-4E60-8D11-595EDAAAC42F",
+    "ProofConnectionName": "C3BEA3AF-C9B7-4DEA-AE35-EA1C626191C0",
+    "AuditLogConnectionName": "44F29D07-21DA-4931-970D-3545F5BCBEB8",
+    "EnableUnifiedLog": "1",
+    "TimeOut": "60",
+    "EmailBounceAddress": "punithavathy.m@mailcps.com",
+    "MOMToken": "092DE9179-9423-494E-803D-7BC1E031F810C3BEA3AF-C9B7-4DEA-AE35-EA1C626191C00314393C-29B4-4E60-8D11-595EDAAAC42F",  
+    "APIDomain": "",
+    "AppConnectionsKey": "AppConnections", 
+    "DynamicContainerPath": "D:\\Proof\\Axon Ver 5.3\\Code",
+    "MetadataAssemblyPath": "MetadataAssemblyPath", 
+    "NoCodeConnection": "E931042D-13B2-4C48-9DAE-7E9959295D9E",
+    "TargetDBType":"8" //8-Postgres,0-MSSQL
+
+  }
+}
+

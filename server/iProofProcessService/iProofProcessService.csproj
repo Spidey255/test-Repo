@@ -1,0 +1,76 @@
+
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+		<DocumentationFile>bin\$(AssemblyName).xml</DocumentationFile>
+		<NoWarn>1591</NoWarn>
+	</PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>bin</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>   
+    <PackageReference Include="System.Text.Json" Version="9.0.0" />
+    <PackageReference Include="SpanJson" Version="4.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Cors" Version="2.2.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="6.0.0" />
+     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="6.0.9" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="SupportDLL\" />
+  </ItemGroup>
+
+  <ItemGroup>    
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\SupportDLL\Newtonsoft.Json.dll</HintPath>
+    </Reference>     
+    <Reference Include="log4net">
+      <HintPath>..\SupportDLL\log4net.dll</HintPath>
+    </Reference> 
+     <Reference Include="ObjectFactory">
+      <HintPath>..\SupportDLL\ObjectFactory.dll</HintPath>
+    </Reference>
+    <Reference Include="ProofExceptions">
+      <HintPath>..\SupportDLL\ProofExceptions.dll</HintPath>
+    </Reference>
+     <Reference Include="CommonInterface">
+      <HintPath>..\SupportDLL\CommonInterface.dll</HintPath>
+    </Reference>  
+     <Reference Include="SpanJson">
+      <HintPath>..\SupportDLL\SpanJson.dll</HintPath>
+    </Reference>
+   
+      <Reference Include="ConfigSectionHandlers">
+      <HintPath>..\SupportDLL\ConfigSectionHandlers.dll</HintPath>
+    </Reference>
+
+      <Reference Include="Cryptography">
+      <HintPath>..\SupportDLL\Cryptography.dll</HintPath>
+    </Reference>
+    
+    </ItemGroup>
+      <ItemGroup>
+    <ProjectReference Include="..\FormInterfaceLibrary\FormInterfaceLibrary.csproj" />
+    <ProjectReference Include="..\DataController\DataController.csproj" />
+  </ItemGroup>
+
+    <ItemGroup>
+    <None Update="ApplicationSettings.Config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+    <ItemGroup>
+    <None Update="ComponentSettings.Config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="LogSettings.Config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>  
+  </ItemGroup>
+</Project>

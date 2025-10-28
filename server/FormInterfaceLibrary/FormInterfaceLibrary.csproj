@@ -1,0 +1,36 @@
+
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+		<DocumentationFile>bin\$(AssemblyName).xml</DocumentationFile>
+		<NoWarn>1591</NoWarn>
+	</PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>bin</OutputPath>
+     <Version>5.2.07.08</Version>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Text.Json" Version="9.0.0" />
+   
+  </ItemGroup>
+ 
+  <ItemGroup>
+    <ProjectReference Include="..\FormModels\FormModels.csproj" />
+  </ItemGroup>
+  <ItemGroup>      
+  
+    <Reference Include="log4net">
+      <HintPath>..\SupportDLL\log4net.dll</HintPath>
+    </Reference>  
+   
+    
+    </ItemGroup>
+    <ItemGroup>
+   
+  </ItemGroup>
+   
+</Project>
