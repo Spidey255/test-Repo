@@ -1,0 +1,165 @@
+:root{
+  --bg:#080812;
+  --panel:#0f1720;
+  --muted:#94a3b8;
+  --accent:#6ee7b7;
+  --card:#0b1220;
+}
+
+body {
+  background: radial-gradient(circle at 10% 10%, #071026 0%, #05050a 45%, #021018 100%);
+  color: #e6eef8;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+}
+
+/* small helpers */
+.scheduler-wrap { padding: 16px; }
+.card-surface {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255,255,255,0.04);
+  border-radius: 12px;
+  box-shadow: 0 6px 30px rgba(2,6,23,0.6), inset 0 1px 0 rgba(255,255,255,0.02);
+}
+
+/* Futuristic scheduler specific */
+.scheduler-container {
+  display: flex;
+  gap: 12px;
+  align-items: stretch;
+  min-height: 500px;
+}
+
+/* left sidebar */
+.scheduler-sidebar {
+  width: 220px;
+  padding: 12px;
+}
+
+.scheduler-main {
+  flex: 1;
+  overflow: auto;
+  padding: 12px;
+}
+
+/* grid layout */
+.days-header {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.days-header .day-pill {
+  padding: 8px 12px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.02);
+  border: 1px dashed rgba(255,255,255,0.03);
+  cursor: pointer;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 120px 1fr; /* time-gutter + content */
+  overflow: hidden;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.04);
+}
+
+/* left time gutter */
+.time-gutter {
+  background: rgba(0,0,0,0.15);
+  border-right: 1px solid rgba(255,255,255,0.02);
+  padding: 8px;
+  min-width: 120px;
+}
+
+.time-slot {
+  height: 36px; /* default slot height - updated inline via JS */
+  border-bottom: 1px solid rgba(255,255,255,0.02);
+  display:flex;
+  align-items:center;
+  padding-left:8px;
+  font-size:12px;
+  color:var(--muted);
+}
+
+/* content area - columns per day */
+.content-area {
+  overflow: auto;
+  background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));
+  position: relative;
+}
+
+.day-columns {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 2px;
+  padding: 8px;
+}
+
+/* each day column */
+.day-column {
+  min-width: 300px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));
+  border-radius: 8px;
+  overflow: hidden;
+  border:1px solid rgba(255,255,255,0.02);
+}
+
+/* resource row within a day */
+.resource-row {
+  position: relative;
+  min-height: 0;
+  border-top: 1px solid rgba(255,255,255,0.02);
+}
+
+/* slots column within resource */
+.resource-slot-area {
+  position: relative;
+}
+
+/* event box */
+.event-card {
+  position: absolute;
+  
+  border-radius: 8px;
+  box-shadow: 0 6px 16px rgba(2,6,23,0.6);
+  padding: 6px 8px;
+  cursor: grab;
+  user-select: none;
+  overflow: hidden;
+  color: #04121f;
+  font-weight:600;
+  font-size: 12px;
+}
+
+/* resize handles */
+.resize-handle {
+  position:absolute;
+  left:0;
+  right:0;
+  height:6px;
+  cursor:ns-resize;
+}
+.resize-handle.top { top:0; }
+.resize-handle.bottom { bottom:0; }
+
+/* drag preview */
+.drag-preview {
+  position:absolute;
+  left:10%;
+  right:10%;
+  background: rgba(110,231,183,0.12);
+  border:1px solid rgba(110,231,183,0.25);
+  border-radius:8px;
+}
+
+/* small helper footer */
+.scheduler-footer {
+  font-size:12px;
+  color:var(--muted);
+  margin-top:8px;
+}
